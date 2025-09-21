@@ -3,6 +3,7 @@ uvicorn[standard]==0.33.0
 PyPDF2==3.0.1
 python-multipart==0.0.9
 
+google-generativeai
 
 
 torch
@@ -11,4 +12,5 @@ huggingface-hub
 numpy
 faiss-cpu
 pydantic
+
 
