@@ -248,11 +248,14 @@ Provide a clear, concise answer and summarize key clauses if relevant.
         return {"error": str(e)}
     
 
-
+@app.get("/")
+def home():
+    return {"message": "Microservice is running"}
 # --------------------------
 # Run server
 # --------------------------
 if __name__ == "__main__":
     import uvicorn
     print("🚀 Starting InLegalBERT + FAISS Microservice on port 8000...")
+
     uvicorn.run(app, host="0.0.0.0", port=8000)
