@@ -256,6 +256,9 @@ def home():
 # --------------------------
 if __name__ == "__main__":
     import uvicorn
-    print("🚀 Starting InLegalBERT + FAISS Microservice on port 8000...")
+    import os
+    port = int(os.environ.get("PORT", 8000))  # Use Render's PORT if available
+    print(f"🚀 Starting InLegalBERT + FAISS Microservice on port {port}...")
 
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run("microservice:app", host="0.0.0.0", port=port, reload=False)
+
