@@ -2,3 +2,12 @@ fastapi==0.116.2
 uvicorn==0.33.0
 PyPDF2==3.0.1
 python-multipart==0.0.9
+
+
+
+torch
+transformers
+huggingface-hub
+numpy
+faiss-cpu
+pydantic
